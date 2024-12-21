@@ -173,7 +173,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp ESCAPE  &trans        &out OUT_TOG  &trans        &sys_reset      &kp SCROLLLOCK  &kp LC(LS(TAB))  &kp UP_ARROW    &kp LS(TAB)      &kp BACKSPACE
+        &kp ESCAPE  &trans        &out OUT_TOG  &trans        &sys_reset      &kp SCROLLLOCK  &kp LC(LS(TAB))  &kp UP_ARROW    &kp LC(TAB)      &kp BACKSPACE
         &kp TAB     &bt BT_PRV    &bt BT_CLR    &bt BT_NXT    &bt BT_SEL 4    &trans          &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp ENTER
 &trans  &to 4       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &kp INS         &kp DELETE       &trans          &trans           &WinSec        &trans
                                   &trans        &to 0         &trans          &trans          &to 1            &trans
