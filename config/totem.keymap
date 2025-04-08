@@ -64,13 +64,6 @@
                 <&macro_tap>,
                 <&kp G &kp I &kp F>;
         };
-
-        WinSec: WinSec {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(LC(DELETE))>;
-            label = "WINSEC";
-        };
     };
 
     keymap {
@@ -78,7 +71,7 @@
 
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
-        base_layer {
+        BASE {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
             label = "BASE";
@@ -98,13 +91,11 @@
          &kp Q  &kp W  &kp F           &kp P        &kp B             &kp J            &kp L        &kp U                    &kp Y                   &mt SEMI SQT
          &kp A  &kp R  &kp S           &kp T        &kp G             &kp M            &kp N        &kp E                    &kp I                   &kp O
 &kp TAB  &kp Z  &kp X  &mt LEFT_ALT C  &mt LCTRL D  &mt LEFT_WIN V    &mt RIGHT_WIN K  &mt RCTRL H  &mt RA(RIGHT_ALT) COMMA  &mt EXCLAMATION PERIOD  &mt UNDERSCORE SLASH  &kp ENTER
-                       &kp ESCAPE      &kp SPACE    &kp LEFT_SHIFT    &to 2            &to 1        &kp BSPC
+                       &kp ESCAPE      &lt 3 SPACE  &kp LEFT_SHIFT    &lt 2 ENTER      &to 1        &kp BSPC
             >;
         };
 
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-        SYM_LAYER {
+        SYM {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
             label = "SYM";
@@ -121,16 +112,14 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp ESCAPE  &kp AT_SIGN  &mt PRINTSCREEN HASH  &kp DOLLAR         &kp PERCENT       &kp CARET             &kp AMPERSAND         &mt PAGE_UP ASTERISK       &kp COLON          &kp BACKSPACE
-        &kp TAB     &kp MINUS    &kp PLUS              &kp EQUAL          &kp UNDERSCORE    &kp NON_US_BACKSLASH  &mt HOME LEFT_BRACE   &mt PAGE_DOWN RIGHT_BRACE  &mt END PIPE       &kp ENTER
-&trans  &caps_word  &kp TILDE    &kp SQT               &kp DOUBLE_QUOTES  &kp GRAVE         &kp LEFT_BRACKET      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS      &kp RIGHT_BRACKET  &to 3          &trans
-                                 &trans                &to 0              &trans            &trans                &to 2                 &trans
+        &kp ESCAPE  &kp AT_SIGN  &mt PRINTSCREEN HASH  &kp DOLLAR               &kp PERCENT           &kp CARET                   &kp AMPERSAND               &mt PAGE_UP ASTERISK             &kp COLON          &kp BACKSPACE
+        &kp TAB     &kp MINUS    &kp PLUS              &kp EQUAL                &kp UNDERSCORE        &kp NON_US_BACKSLASH        &mt HOME LEFT_BRACE         &mt PAGE_DOWN RIGHT_BRACE        &mt END PIPE       &kp ENTER
+&trans  &caps_word  &kp TILDE    &mt LEFT_ALT SQT      &mt LCTRL DOUBLE_QUOTES  &mt LEFT_GUI GRAVE    &mt RIGHT_GUI LEFT_BRACKET  &mt RCTRL LEFT_PARENTHESIS  &mt RIGHT_ALT RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &to 4          &trans
+                                 &trans                &to 0                    &trans                &trans                      &to 2                       &trans
             >;
         };
 
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-
-        NUM_LAYER {
+        NUM {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
             label = "NUM";
@@ -147,16 +136,24 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp ESCAPE  &kp N7        &kp N8        &kp N9        &kp MINUS     &kp F12  &kp F7  &kp F8  &kp F9  &kp BACKSPACE
-        &kp TAB     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS      &kp F11  &kp F4  &kp F5  &kp F6  &kp ENTER
-&trans  &kp N0      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &kp F10  &kp F1  &kp F2  &kp F3  &to 3          &trans
-                                  &trans        &to 0         &trans        &trans   &to 1   &trans
+        &kp ESCAPE  &kp N7        &kp N8        &kp N9        &kp MINUS     &trans  &trans  &trans  &trans  &kp BACKSPACE
+        &kp TAB     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS      &trans  &trans  &trans  &trans  &kp ENTER
+&trans  &kp N0      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PERIOD    &trans  &trans  &trans  &trans  &to 4          &trans
+                                  &trans        &to 0         &trans        &trans  &to 1   &trans
             >;
         };
 
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+        FUNC {
+            label = "FUNC";
+            bindings = <
+        &kp ESCAPE  &trans  &trans  &trans  &trans    &kp F12  &kp F7  &kp F8  &kp F9  &kp BACKSPACE
+        &kp TAB     &trans  &trans  &trans  &trans    &kp F11  &kp F4  &kp F5  &kp F6  &kp ENTER
+&trans  &caps_word  &trans  &trans  &trans  &trans    &kp F10  &kp F1  &kp F2  &kp F3  &to 4          &trans
+                            &trans  &to 0   &trans    &trans   &to 1   &trans
+            >;
+        };
 
-        NAV_LAYER {
+        NAV {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
 
             label = "NAV";
@@ -173,14 +170,12 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp ESCAPE  &out OUT_BLE  &sys_reset    &out OUT_USB  &sys_reset      &kp SCROLLLOCK  &kp LC(LS(TAB))  &kp UP_ARROW    &kp LC(TAB)      &kp BACKSPACE
-        &kp TAB     &bt BT_PRV    &bt BT_CLR    &bt BT_NXT    &bt BT_SEL 4    &trans          &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp ENTER
-&trans  &to 4       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &kp INS         &kp DELETE       &trans          &trans           &WinSec        &trans
-                                  &trans        &to 0         &trans          &trans          &to 1            &trans
+        &kp ESCAPE  &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &kp SCROLLLOCK  &kp LC(LS(TAB))  &kp UP_ARROW    &kp LC(TAB)      &kp BACKSPACE
+        &kp TAB     &bt BT_SEL 4    &bt BT_CLR    &out OUT_TOG  &bootloader     &bootloader     &kp LEFT_ARROW   &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp ENTER
+&trans  &to 5       &kp KP_NUMLOCK  &kp LEFT_ALT  &kp LCTRL     &kp LEFT_GUI    &kp INS         &kp DELETE       &trans          &trans           &kp LC(LA(DELETE))  &trans
+                                    &trans        &to 0         &trans          &trans          &to 1            &trans
             >;
         };
-
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         GAME_LAYER {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -199,14 +194,12 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &kp TAB    &kp Q  &kp W       &kp E        &kp R           &kp T      &kp Y           &kp UP_ARROW    &kp U            &kp I
-              &kp LSHFT  &kp A  &kp S       &kp D        &kp F           &kp G      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp O
-&kp CAPSLOCK  &kp LCTRL  &kp Z  &kp X       &kp C        &kp V           &kp B      &kp N           &kp M           &kp COMMA        &kp DOT  &kp P
-                                &kp ESCAPE  &lt 5 SPACE  &kp LEFT_ALT    &kp ENTER  &to 1           &kp BACKSPACE
+              &kp TAB    &kp Q  &kp W       &kp E        &kp R                     &kp T      &kp Y           &kp UP_ARROW    &kp U            &kp I
+              &kp LSHFT  &kp A  &kp S       &kp D        &kp F                     &kp G      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp O
+&kp CAPSLOCK  &kp LCTRL  &kp Z  &kp X       &kp C        &kp V                     &kp B      &kp N           &kp M           &kp PERIOD       &kp P  &kp COMMA
+                                &kp ESCAPE  &lt 6 SPACE  &mt LEFT_ALT BACKSPACE    &kp ENTER  &to 1           &kp BACKSPACE
             >;
         };
-
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         GAME_LAYER2 {
             // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
@@ -225,10 +218,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp N1     &kp N2        &kp N3       &kp N4         &kp N5          &kp N6    &kp N7    &kp N8    &kp N9    &kp N0
-        &kp GRAVE  &kp LS(LEFT)  &kp LC(F17)  &kp LS(RIGHT)  &kp F11         &kp BSLH  &kp SEMI  &kp APOS  &kp LBKT  &kp RBKT
-&trans  &kp F1     &kp F2        &kp F3       &kp F4         &kp F5          &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &trans
-                                 &kp ESCAPE   &none          &kp LEFT_ALT    &trans    &trans    &trans
+              &mt ESCAPE NUMBER_1  &kp N2        &kp N3       &kp N4         &kp N5          &kp N6     &kp N7  &kp N8                &kp N9         &kp N0
+              &kp GRAVE            &kp LS(LEFT)  &kp LC(F17)  &kp LS(RIGHT)  &kp F11         &kp F12    &trans  &kp NON_US_BACKSLASH  &kp SEMICOLON  &kp SQT
+&kp CAPSLOCK  &kp F1               &kp F2        &kp F3       &kp F4         &kp F5          &kp F6     &kp F7  &kp F8                &kp F9         &kp F10  &kp COMMA
+                                                 &kp ESCAPE   &none          &kp LEFT_ALT    &kp ENTER  &to 1   &kp BACKSPACE
             >;
         };
     };
