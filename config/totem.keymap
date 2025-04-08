@@ -218,10 +218,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &mt ESCAPE NUMBER_1  &kp N2        &kp N3       &kp N4         &kp N5          &kp N6     &kp N7  &kp N8                &kp N9         &kp N0
-              &kp GRAVE            &kp LS(LEFT)  &kp LC(F17)  &kp LS(RIGHT)  &kp F11         &kp F12    &trans  &kp NON_US_BACKSLASH  &kp SEMICOLON  &kp SQT
-&kp CAPSLOCK  &kp F1               &kp F2        &kp F3       &kp F4         &kp F5          &kp F6     &kp F7  &kp F8                &kp F9         &kp F10  &kp COMMA
-                                                 &kp ESCAPE   &none          &kp LEFT_ALT    &kp ENTER  &to 1   &kp BACKSPACE
+            &mt ESCAPE NUMBER_1  &kp N2        &kp N3       &kp N4         &kp N5          &kp N6     &kp N7  &kp N8                &kp N9         &kp N0
+            &kp GRAVE            &kp LS(LEFT)  &kp LC(F17)  &kp LS(RIGHT)  &kp F11         &kp F12    &trans  &kp NON_US_BACKSLASH  &kp SEMICOLON  &kp SQT
+&caps_word  &kp F1               &kp F2        &kp F3       &kp F4         &kp F5          &kp F6     &kp F7  &mt COMMA F8          &mt PERIOD F9  &mt SLASH F10  &kp ENTER
+                                               &kp ESCAPE   &none          &kp LEFT_ALT    &kp ENTER  &to 1   &kp BACKSPACE
             >;
         };
     };
